@@ -3,61 +3,33 @@ import React from "react";
 import "./App.css";
 
 import Header from "./components/Header";
+import MainSection from "./components/MainSection";
 import Footer from "./components/Footer";
 
 function App() {
+  const sections = [
+    {
+      title: "Learn how to code",
+      badge: "Its awesome!",
+    },
+    {
+      title: "Learn how to check yourself",
+      badge: "Don't wreck yourself!",
+    },
+  ];
+
   return (
     <div>
       <Header />
       <div className="section-header-spacer"></div>
 
       <div className="content">
-        <div className="section section-what-usp">
-          <div className="component-section-header">
-            <div className="title-badge">
-              <div className="title-badge-title">Do you want to</div>
-            </div>
+        {sections.map(({ badge, title }) => (
+          <MainSection badge={badge} title={title} />
+        ))}
 
-            <h2>
-              <div className="component-title ">Learn how to code</div>
-            </h2>
-
-            <div className="description">
-              Awesome! Let’s do this together. We are here to support you in
-              your coding journey.
-            </div>
-          </div>
-
-          <div className="component-usp-row">
-            <div className="item team">
-              <img
-                className="image"
-                src="https://learntocodetogether.nl/assets/team.svg"
-              />
-              <div className="component-title title">
-                Get help from experienced developers
-              </div>
-            </div>
-            <div className="item team">
-              <img
-                className="image"
-                src="https://learntocodetogether.nl/assets/community.svg"
-              />
-              <div className="component-title title">
-                Learn &amp; share with our community
-              </div>
-            </div>
-            <div className="item team">
-              <img
-                className="image"
-                src="https://learntocodetogether.nl/assets/personal-speed.svg"
-              />
-              <div className="component-title title">
-                Personal &amp; at your own speed
-              </div>
-            </div>
-          </div>
-        </div>
+        <MainSection badge={sections[0].badge} title={sections[0].title} />
+        <MainSection badge={sections[1].badge} title={sections[1].title} />
 
         <div className="section-line">
           <div className="line "></div>
