@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeaderComponent() {
+export default function Header() {
   return (
     <header id="header" className="section-header scroll">
       <a href="./">

@@ -2,12 +2,12 @@
 import React from "react";
 import "./App.css";
 
-import HeaderComponent from "./components/HeaderComponent";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <HeaderComponent />
+      <Header />
       <div className="section-header-spacer"></div>
 
       <div className="content">
